@@ -7,6 +7,6 @@ class Item {
 }
 
 
-
-
+// const items = new Item('foiroi', 'oifhfeoiv')
+// console.log(items)
 module.exports = Item
