@@ -1,4 +1,6 @@
-// const Restaurant = require('../src/Restaurant')
+const sqlite3 = require('sqlite3').verbose();
+
+const db = new sqlite3.Database('../Database/restaurants.sqlite');
 
 
 class Menu {
@@ -15,6 +17,10 @@ class Menu {
     deleteItem(item) {
         const itemIndex = this.items.indexOf(item)
         console.log('splicing', this.items.splice(itemIndex, 1))
+    }
+
+    save(cb) {
+        db.run("INSERT INTO Menu(title, icon, items) VALUES(?, ?, ?)", [this.title, this.icon, this.items], cb);
     }
 }
 

@@ -1,0 +1,14 @@
+{
+  "name": "database1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dbconnect.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sqlite3": "^5.0.0"
+  }
+}

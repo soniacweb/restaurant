@@ -2,8 +2,8 @@ const Menu = require('./Menu')
 const Restaurant = require('../src/Restaurant')
 const Item = require('../src/Item')
 
-function FullRestaurantSpec(name, imageUrl, city, menuTitle, menuIcon, itemName, itemPrice) {
- const restaurant = new Restaurant(name, imageUrl, city)
+function FullRestaurantSpec(name, imageUrl, menuTitle, menuIcon, itemName, itemPrice) {
+ const restaurant = new Restaurant(name, imageUrl )
  const menu = new Menu(menuTitle, menuIcon)
  const item = new Item(itemName, itemPrice)
  menu.addItem(item)
@@ -15,4 +15,4 @@ function FullRestaurantSpec(name, imageUrl, city, menuTitle, menuIcon, itemName,
     
 }
 
-FullRestaurantSpec('Nandos', 'imageUrl', 'Milton Keynes', 'Grilled Chicken', 'menuIcon', 'Half Chicken', '£10') 
+FullRestaurantSpec('Nandos', 'imageUrl', 'Grilled Chicken', 'menuIcon', 'Half Chicken', '£10') 

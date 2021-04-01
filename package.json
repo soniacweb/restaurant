@@ -2,13 +2,14 @@
   "name": "restaurantapp",
   "version": "1.0.0",
   "description": "",
-  "main": "Item.js",
+  "main": "initialise.js",
   "scripts": {
     "test": "jest",
     "test:report": "jest --coverage=true"
   },
   "dependencies": {
-    "jest": "^26.6.3"
+    "jest": "^26.6.3",
+    "sqlite3": "^5.0.2"
   },
   "author": "",
   "license": "ISC"

@@ -13,7 +13,7 @@ describe('Create Obj Testing', () => {
         expect(menu.items).toEqual([{"name": "itemName", "price": "itemPrice"}]);
     })
    test('can add menu to restaurant', () => {
-    const restaurant = new Restaurant('qwerty', 'imageUrl', 'city')
+    const restaurant = new Restaurant('qwerty', 'imageUrl')
     const menu = new Menu('menuTitle', 'menuIcon')
     const item = new Item('itemName', 'itemPrice')
     menu.addItem(item)

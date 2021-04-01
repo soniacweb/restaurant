@@ -15,3 +15,21 @@ describe('Restaurant object', () => {
         expect(restaurant.city).toEqual('test123');
     })
 })
+
+describe('Restaurants', () => {
+    beforeAll((done) => {
+        db.run('CREATE TABLE IF NOT EXISTS restaurant(id INTEGER PRIMARY KEY, name TEXT, image TEXT);', done)
+    })
+
+    test('When a Restaurant is created it is stored in the database', (done) => {
+        const restaurant = new Restaurant({name: 'Boo Jangles', image: 'https://some.image.url'})
+        expect(restaurant.id).toBe(1)
+        restaurant.save(() => {
+            db.get('SELECT * FROM restaurant WHERE id=?;', 1, (err, row) => {
+                expect(row.name).toBe('Boo Jangles')
+                done()
+            })
+        })
+       
+    })
+})
